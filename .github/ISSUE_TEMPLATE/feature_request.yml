@@ -1,0 +1,36 @@
+name: 💡 Feature request
+description: Something you wish getmyorg did.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: The motivation matters more than the solution. What's painful today?
+      placeholder: When I … I have to … which is …
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like getmyorg to do?
+      description: Your proposed solution, if you have one.
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or workarounds
+      description: Anything you've tried or considered.
+    validations:
+      required: false
+  - type: dropdown
+    id: importance
+    attributes:
+      label: How important is this to you?
+      options:
+        - Nice to have
+        - Would meaningfully improve my workflow
+        - Blocking my use of getmyorg
+    validations:
+      required: false
