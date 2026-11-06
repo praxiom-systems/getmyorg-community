@@ -1,0 +1,29 @@
+name: 💬 Feedback
+description: What's confusing, what's missing, what you love.
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The beta is how we learn from real installs. Anything goes: rough
+        edges, docs that didn't land, moments that delighted you.
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Your feedback
+      placeholder: I found … / It would help if … / I really liked …
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: What's this about?
+      options:
+        - Install / onboarding
+        - Login / auth
+        - Project map / agents
+        - Docs
+        - Overall impression
+        - Something else
+    validations:
+      required: false

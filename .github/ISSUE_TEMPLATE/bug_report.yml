@@ -1,0 +1,84 @@
+name: 🐞 Bug report
+description: Something broke, errored, or behaved unexpectedly.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Run `/myorg:doctor` (Codex: `$myorg:doctor`) first:
+        it fixes or explains most problems, and its output is the most useful
+        thing you can paste below.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, and what went wrong?
+      placeholder: I ran … and instead of … I got …
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The exact commands or actions, in order.
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: false
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: false
+  - type: textarea
+    id: doctor
+    attributes:
+      label: "/myorg:doctor output"
+      description: "Paste the full output of `/myorg:doctor` (Codex: `$myorg:doctor`)."
+      render: text
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: getmyorg version
+      description: The first line of `/myorg:doctor` shows it.
+      placeholder: v0.x.y
+    validations:
+      required: false
+  - type: dropdown
+    id: host
+    attributes:
+      label: Host
+      options:
+        - Claude Code
+        - Codex CLI
+        - Gemini CLI
+        - OpenCode
+        - Other / not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS
+        - Linux
+        - Windows (WSL2)
+        - Other / not sure
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / crash report
+      description: >
+        The MCP server output pane (look for `[getmyorg]` lines) and any crash
+        report from `~/.config/getmyorg/crashes/`.
+      render: text
+    validations:
+      required: false

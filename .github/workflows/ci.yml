@@ -1,0 +1,29 @@
+name: CI
+
+# Pull requests run after approval through Greenlight Actions
+# (https://github.com/apps/greenlight-actions): click "Run CI" on the PR check
+# or comment /greenlight. Pushes to main run without the gate.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Check templates and links
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    # The greenlight environment's Greenlight Actions protection rule pauses
+    # this job until a maintainer approves the PR.
+    environment: ${{ github.event_name == 'pull_request' && 'greenlight' || '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - run: python3 .github/scripts/check_repo.py
