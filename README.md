@@ -34,3 +34,10 @@ For questions and ideas that aren't a concrete bug or request, use
 ## Security
 
 Don't file security issues here. See [SECURITY.md](SECURITY.md).
+
+## Pull requests
+
+Fixes to this README or the issue templates are welcome. CI on pull requests
+runs once a maintainer approves it with
+[Greenlight Actions](https://github.com/apps/greenlight-actions), which keeps
+CI from running on every push until someone has looked at the change.
