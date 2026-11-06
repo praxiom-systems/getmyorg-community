@@ -5,9 +5,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting! A 30-second self-check resolves most issues:
-        run `/myorg:doctor` (or `getmyorg doctor`) and paste its output below —
-        it's the single most useful thing you can include.
+        Thanks for reporting. Run `/myorg:doctor` (Codex: `$myorg:doctor`) first:
+        it fixes or explains most problems, and its output is the most useful
+        thing you can paste below.
   - type: textarea
     id: what-happened
     attributes:
@@ -37,7 +37,7 @@ body:
     id: doctor
     attributes:
       label: "/myorg:doctor output"
-      description: Paste the full output of `/myorg:doctor` (or `getmyorg doctor`).
+      description: "Paste the full output of `/myorg:doctor` (Codex: `$myorg:doctor`)."
       render: text
     validations:
       required: false
@@ -45,7 +45,7 @@ body:
     id: version
     attributes:
       label: getmyorg version
-      description: Output of `getmyorg --version`.
+      description: The first line of `/myorg:doctor` shows it.
       placeholder: v0.x.y
     validations:
       required: false

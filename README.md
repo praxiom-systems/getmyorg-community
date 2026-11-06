@@ -1,42 +1,36 @@
 # getmyorg community
 
-The public front door for **[getmyorg](https://getmyorg.com)** — a pre-built AI
-organization that installs into Claude Code, Codex CLI, and other agent hosts.
+The public home for **[getmyorg](https://getmyorg.com)**: a pre-built AI
+organization for Claude Code and Codex. getmyorg is in invite-only beta: anyone
+can install it, and signing in needs an invite.
 
-This repo is where you:
+The product source is closed. This repo holds issues and discussions only.
 
-- 🐞 **Report a bug** — something broke, errored, or behaved unexpectedly
-- 💡 **Request a feature** — something you wish getmyorg did
-- 💬 **Share feedback** — what's confusing, what's missing, what you love
+## Install and docs
 
-> The getmyorg product source is closed. This repo holds **issues and
-> discussions only** — it's the place to talk to us, not the codebase.
+- [Getting started](https://getmyorg.com/docs): install, sign in, and map your
+  first repo.
+- [Troubleshooting](https://getmyorg.com/docs/troubleshooting): fixes for the
+  common install, sign-in and map problems.
+- [What works today](https://getmyorg.com/docs/status): what's ready, and what
+  isn't yet.
 
-## File something
+## Report a bug, ask for a feature, or tell us what you think
 
-[**→ Open an issue**](https://github.com/praxiom-systems/getmyorg-community/issues/new/choose)
-and pick a template (Bug report · Feature request · Feedback).
+[Open an issue](https://github.com/praxiom-systems/getmyorg-community/issues/new/choose)
+and pick a template.
 
-Before filing a bug, a 30-second self-check resolves most install/login/map
-problems: run `/myorg:doctor` (or `getmyorg doctor` in a terminal). Paste its
-output into your report — it's the single most useful thing you can include.
+Before filing a bug, run `/myorg:doctor` (Codex: `$myorg:doctor`). It fixes
+or explains most install, sign-in and map problems, and its output is the most
+useful thing to paste into a report. Also include:
 
-## What helps us help you
+- your getmyorg version (the first line of `/myorg:doctor`)
+- your host (Claude Code or Codex) and OS (macOS, Linux or WSL2)
+- any crash report from `~/.config/getmyorg/crashes/`
 
-- `/myorg:doctor` output
-- Your getmyorg version (`getmyorg --version`)
-- Your host + OS (Claude Code / Codex CLI / …, macOS / Linux / WSL2)
-- The MCP server output pane (look for `[getmyorg]` lines)
-- Any crash report from `~/.config/getmyorg/crashes/`
+For questions and ideas that aren't a concrete bug or request, use
+[Discussions](https://github.com/praxiom-systems/getmyorg-community/discussions).
 
-## Discussions
+## Security
 
-Have a question, an idea, or something to show? Use
-[Discussions](https://github.com/praxiom-systems/getmyorg-community/discussions)
-for anything that isn't a concrete bug or request.
-
-## Links
-
-- 🌐 [getmyorg.com](https://getmyorg.com)
-- 🔐 Security issues: please **do not** file them publicly here — email
-  security@getmyorg.com instead.
+Don't file security issues here. See [SECURITY.md](SECURITY.md).

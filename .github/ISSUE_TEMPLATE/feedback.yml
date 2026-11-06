@@ -5,8 +5,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        Open beta exists so we can learn from real installs. Anything goes —
-        rough edges, docs that didn't land, moments that delighted you.
+        The beta is how we learn from real installs. Anything goes: rough
+        edges, docs that didn't land, moments that delighted you.
   - type: textarea
     id: feedback
     attributes:
